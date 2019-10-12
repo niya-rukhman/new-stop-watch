@@ -1,0 +1,188 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #252e44;
+}
+
+h1 {
+    color: #d2d7e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#watch {
+    height: 150px;
+    width: 150px;
+    border: 18px solid #d2d7e2;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius: 50%;
+}
+
+.top1 {
+    background-color: #d2d7e2;
+    height: 12px;
+    width: 28px;
+    position: absolute;
+    left: 59px;
+    top: -35px;
+}
+
+.top1:before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 50px;
+    background-color: #d2d7e2;
+    bottom: 12px;
+    left: -11px;
+}
+
+.top2 {
+    background-color: #d2d7e2;
+    height: 18px;
+    width: 28px;
+    position: absolute;
+    left: 150px;
+    bottom: 130px;
+    transform: rotate(53deg);
+}
+
+.clock {
+    background-color: #d2d7e2;
+    height: 60px;
+    width: 60px;
+    border-radius: 0 170px 0 0;
+    position: absolute;
+}
+
+.t1 {
+    right: 15px;
+    top: 15px;
+}
+
+@keyframes time1 {
+    19% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.t2 {
+    right: 15px;
+    bottom: 15px;
+    transform: rotate(90deg);
+}
+
+@keyframes time2 {
+    39% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.t3 {
+    left: 15px;
+    bottom: 15px;
+    transform: rotate(180deg);
+}
+
+@keyframes time3 {
+    59% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.t4 {
+    left: 15px;
+    top: 15px;
+    transform: rotate(270deg);
+}
+
+@keyframes time4 {
+    79% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3.5em;
+    color: #d2d7e2;
+}
+
+#btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: 390px;
+}
+
+button {
+    padding: 10px;
+    margin: 0.5em;
+    border: 1px solid #1f292a;
+    border-radius: 11px;
+    font-weight: bold;
+    background-color: #d2d7e2;
+    color: #181e29;
+}
+
+button:hover {
+    color: #bcc5c9;
+    background-color: #1f292a;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
+        margin-left: 85px;
+    }
+    #time {
+        font-size: 3.1em;
+        margin-top: 70px;
+        margin-left: 19px;
+    }
+    #watch {
+        margin-bottom: 145px;
+        margin-left: 73px;
+    }
+    #btn {
+        text-align: center;
+        margin: 10px;
+    }
+}
