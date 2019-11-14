@@ -20,14 +20,28 @@ function setTime() {
     document.querySelector('#hours').innerHTML = hours;
     document.querySelector('#minutes').innerHTML = minutes;
     document.querySelector('#seconds').innerHTML = seconds;
-
+    updateUI();
 
 }
 
 function updateUI() {
-    document.querySelector('#hours').innerHTML = "0" + hours;
-    document.querySelector('#minutes').innerHTML = "0" + minutes;
-    document.querySelector('#seconds').innerHTML = "0" + seconds;
+    if (hours < 10) {
+        document.querySelector('#hours').innerHTML = "0" + hours;
+    } else {
+        document.querySelector('#hours').innerHTML = hours;
+    }
+
+    if (minutes < 10) {
+        document.querySelector('#minutes').innerHTML = "0" + minutes;
+    } else {
+        document.querySelector('#minutes').innerHTML = minutes;
+    }
+    if (seconds < 10) {
+        document.querySelector('#seconds').innerHTML = "0" + seconds;
+    } else {
+        document.querySelector('#seconds').innerHTML = seconds;
+
+    }
 }
 function start() {
     if (isRunning === false) {
@@ -47,6 +61,7 @@ function stop() {
     document.querySelector(".t2").style = "animation: none;"
     document.querySelector(".t3").style = "animation: none;"
     document.querySelector(".t4").style = "animation: none;"
+    updateUI();
 }
 function reset() {
     hours = 0;
